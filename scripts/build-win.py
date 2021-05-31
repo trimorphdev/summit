@@ -22,3 +22,6 @@ files_string = ' '.join(built_files)
 code = os.system('g++ ' + files_string + ' -o o/summit.exe')
 if code != 0:
   exit(-1)
+
+for file in built_files:
+  os.remove(file)
